@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* يمكنك إضافة تنسيقات مخصصة هنا إذا أردت */
+@theme {
+  --color-brand: #8b5cf6;
+}
+
+body {
+  background-color: rgba(15, 23, 42, 0.8) !important; /* تقليل عتامة الخلفية */
+  backdrop-filter: blur(10px); /* تعزيز تأثير الزجاج */
+}
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>متتبع الأهداف</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+    <div id="home" class="container mx-auto max-w-2xl p-6">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">أهدافي</h1>
+            <button onclick="document.getElementById('goal-modal').classList.add('active')" 
+                    class="bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-xl font-bold transition-all cursor-pointer shadow-lg shadow-purple-900/20">
+                + هدف جديد
+            </button>
+        </div>
+        
+        <div id="goals-list" class="grid gap-4">
+            </div>
+    </div>
+
+    <div id="detail" class="container mx-auto max-w-2xl p-6 hidden">
+        <button onclick="window.goHome()" class="text-slate-400 hover:text-white mb-6 flex items-center gap-2 cursor-pointer transition-colors">
+            <span>→</span> عودة للرئيسية
+        </button>
+        
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl">
+            <h2 id="goal-title" class="text-2xl font-bold mb-6 text-purple-300"></h2>
+            
+            <div id="todos-list" class="space-y-3 mb-8">
+                </div>
+
+            <button id="add-todo-btn" class="w-full py-4 border-2 border-dashed border-slate-800 rounded-2xl text-slate-500 hover:text-purple-400 hover:border-purple-500 transition-all cursor-pointer">
+                + إضافة مهمة جديدة
+            </button>
+        </div>
+    </div>
+
+    <div id="goal-modal" class="modal fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="modal-content bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm">
+            <h3 class="text-xl font-bold mb-4">إنشاء هدف جديد</h3>
+            <input id="goal-input" type="text" placeholder="مثلاً: تعلم لغة Rust..." 
+                   class="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl mb-6 outline-none focus:ring-2 focus:ring-purple-500 text-white">
+            <div class="flex gap-3">
+                <button id="add-goal-btn" class="flex-[2] bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-bold transition-all cursor-pointer">حفظ</button>
+                <button onclick="document.getElementById('goal-modal').classList.remove('active')" 
+                        class="flex-1 bg-slate-800 hover:bg-slate-700 py-3 rounded-xl transition-all cursor-pointer">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

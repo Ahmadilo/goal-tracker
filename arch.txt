@@ -1,0 +1,15 @@
+ptree show --count --no-files --deep 3 --log arch.txt
+
+goal-tracker
+├── .vscode/ (1 Files)
+├── src/ (5 Files)
+│   ├── assets/ (3 Files)
+├── src-tauri/ (5748 Files)
+│   ├── capabilities/ (1 Files)
+│   ├── gen/ (4 Files)
+│   │   └── schemas/ (4 Files)
+│   ├── icons/ (16 Files)
+│   ├── src/ (2 Files)
+│   ├── target/ (5720 Files)
+│   │   ├── debug/ (5716 Files)
+│   │   └── flycheck0/ (2 Files)

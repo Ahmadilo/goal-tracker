@@ -1,0 +1,18 @@
+ptree show --ignore src-tauri .vscode --log frontend.txt
+
+goal-tracker
+├── .gitignore
+├── arch.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── src/
+│   ├── assets/
+│   │   ├── tauri.svg
+│   │   ├── typescript.svg
+│   │   └── vite.svg
+│   ├── main.ts
+│   └── styles.css
+├── tsconfig.json
+└── vite.config.ts

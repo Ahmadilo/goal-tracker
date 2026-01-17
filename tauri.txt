@@ -1,0 +1,12 @@
+ptree show --from src-tauri --ignore capabilities gen target --collapse icons --log tauri.txt
+
+src-tauri
+├── .gitignore
+├── build.rs
+├── Cargo.lock
+├── Cargo.toml
+├── icons/ (collapsed)
+├── src/
+│   ├── lib.rs
+│   └── main.rs
+└── tauri.conf.json
